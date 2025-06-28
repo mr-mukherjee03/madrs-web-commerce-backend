@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Create an account{% endblock title %}
+
+{% block content %}
+<div class="registration">
+  <h2>Create an account</h2>
+  <form method="post" id="registration-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button id="registration-btn" type="submit">Create my account</button>  
+  </form>
+  
+</div>
+{% endblock content %}

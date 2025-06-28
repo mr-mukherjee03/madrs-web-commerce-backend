@@ -1,0 +1,35 @@
+{% extends "shop/base.html" %}
+{%load static%}
+
+{% block title %}Search{% endblock title %}
+
+{% block content %}
+{%if query%}
+    <h1>Products related to "{{query}}"</h1>
+    <h3>
+        {%with results.count as total_results%}
+            Found {{total_results}} result{{total_results|pluralize}}
+        {%endwith%}
+    </h3>
+
+    <div id="main" class="product-list">
+    
+        {% for product in results %}
+        <div class="item">
+            <a href="{{ product.get_absolute_url }}">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" alt="img">
+            </a>
+            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+            <br>
+            ${{ product.price }}
+        </div>
+
+        {%empty%}
+        <p>There are no results for your query</p>
+        {% endfor %}
+  </div>
+
+{%endif%}
+
+
+{% endblock content %}

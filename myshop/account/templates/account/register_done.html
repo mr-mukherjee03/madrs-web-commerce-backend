@@ -1,0 +1,9 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Registration successful{% endblock title %}
+
+{% block content %}
+  <h2>Registration successful</h2>
+    <p>Thank you for registering, {{ new_user.username }}!</p>
+  <p>Now you can <a href={%url "login"%}>log in</a>.!</p>
+{% endblock content %}

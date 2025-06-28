@@ -1,0 +1,34 @@
+{% extends "shop/base.html" %}
+{%block title%} Log-in {%endblock%}
+
+{%block content%}
+  <h2>Log-in</h2>
+  <div id="login-page">
+    {%if form.errors%}
+        <p>Your username and password didn't match. Please try again.</p>
+        {%endif%}
+            <form action="{%url 'login' %}" method="post" id="login-form">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}"/>
+                <button type="submit" id="login-btn">Log in</button>
+            </form>
+            
+            <div class='social'>
+                <ul>
+                    <li class='google'>
+                        <a href="{% url "social:begin" "google-oauth2" %}">Log in with Google</a>
+                    </li>
+                </ul>
+
+            </div>
+            
+            <div>
+                <p>Don't have an account? <a href="{% url 'register' %}">Create one</a></p>
+                <p>Forgot your password? <a href="{% url 'password_reset' %}">Reset it</a></p>
+                <p>Or go back to the <a href="{% url 'shop:product_list' %}">product list</a>.</p>
+            </div>
+   </div>
+   
+  
+{%endblock%}
