@@ -4,8 +4,10 @@ services:
     build: .
     command: ["./wait-for-it.sh","db:5432","--","gunicorn","myshop.wsgi:application","--bind","0.0.0.0:8000"]
     restart: always
+    working_dir: /code
     volumes:
-      - .:/code
+      - ./myshop:/code
+      #- ./wait-for-it.sh:/code/wait-for-it.sh
     ports:
       - "8000:8000"
     environment:
@@ -52,17 +54,23 @@ services:
       - web
       - redis
       - rabbitmq
+    volumes:
+      - ./myshop:/code
     environment:
       - DJANGO_SETTINGS_MODULE=myshop.settings.prod
       - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
       - REDIS_URL=redis://redis:6379/0
+    working_dir: /code
   
   nginx:
     image: nginx:1.25.5
     restart: always
     volumes: 
-      - ./config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - .:/code
+      - ./myshop/config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./myshop:/code
+      - ./myshop/media:/code/media
+      - ./myshop/static:/code/static
+
     ports:
       - "80:80"
     depends_on:
