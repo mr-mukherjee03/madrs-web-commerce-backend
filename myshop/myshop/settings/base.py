@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'shop.apps.ShopConfig',
+    'chat.apps.ChatConfig',
     'rest_framework',
     'social_django',
     'django_extensions',
@@ -91,13 +92,13 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME', default='myshop'),
-        'USER': config('DB_USER', default='myshop'),
-        'PASSWORD': config('DB_PASSWORD', default='myshop'),
-        'HOST': config('DB_HOST', default='127.0.0.1'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': config('DB_NAME', default='myshop'),
+        #'USER': config('DB_USER', default='myshop'),
+        #'PASSWORD': config('DB_PASSWORD', default='myshop'),
+        #'HOST': config('DB_HOST', default='127.0.0.1'),
         #'PORT': config('DB_PORT', default='5432'),
     }
 }

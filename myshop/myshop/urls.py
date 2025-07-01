@@ -28,7 +28,9 @@ urlpatterns = [
     path('payment/', include('payment.urls', namespace='payment')),
     path('coupons/', include('coupons.urls', namespace='coupons')),
     path('api/', include('shop.api.urls',namespace='api')),
-    path('',include('shop.urls', namespace='shop')),
+    path('',include('shop.urls', 
+    namespace='shop')),
+    path('chat/', include('chat.urls', namespace='chat')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
 
