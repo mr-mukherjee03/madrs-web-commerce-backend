@@ -1,5 +1,8 @@
 from decouple import config
 from .base import *
+import os
+
+
 
 DEBUG=False
 
@@ -7,7 +10,8 @@ ADMINS=[
     ('shubh', 'shubhadeephriju@gmail.com'),
 ]
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','myshop.com','www.myshop.com','web']
+ALLOWED_HOSTS= os.getenv("ALLOWED_HOSTS", "localhost").split(",")
+#ALLOWED_HOSTS = ['localhost','127.0.0.1','myshop.com','www.myshop.com','web']
 
 DATABASES={
     'default': {

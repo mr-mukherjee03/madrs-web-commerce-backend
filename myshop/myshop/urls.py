@@ -30,7 +30,6 @@ urlpatterns = [
     path('api/', include('shop.api.urls',namespace='api')),
     path('',include('shop.urls', 
     namespace='shop')),
-    path('chat/', include('chat.urls', namespace='chat')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
 

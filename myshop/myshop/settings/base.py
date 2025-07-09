@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
 
 
 
@@ -47,7 +48,6 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'shop.apps.ShopConfig',
-    'chat.apps.ChatConfig',
     'rest_framework',
     'social_django',
     'django_extensions',
