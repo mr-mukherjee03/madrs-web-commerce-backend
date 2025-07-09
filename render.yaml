@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: myshop-web
+    env: docker
+    plan: free
+    autoDeploy: true
+    buildCommand: docker-compose build web
+    startCommand: docker-compose up web
+
+  - type: worker
+    name: myshop-celery
+    env: docker
+    plan: free
+    autoDeploy: true
+    buildCommand: docker-compose build celery
+    startCommand: docker-compose up celery
