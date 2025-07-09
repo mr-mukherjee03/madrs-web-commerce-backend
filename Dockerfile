@@ -17,7 +17,7 @@ RUN pip install -r requirements.txt
 # Copy project files
 COPY ./myshop/ .
 
-RUN python manage.py collectstatic --noinput
+RUN python myshop/manage.py collectstatic --noinput
 
 # Start the app with gunicorn
 CMD ["gunicorn", "myshop.wsgi:application", "--bind", "0.0.0.0:8000"]
