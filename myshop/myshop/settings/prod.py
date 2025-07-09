@@ -11,7 +11,10 @@ ADMINS=[
 ]
 
 #ALLOWED_HOSTS= os.getenv("ALLOWED_HOSTS", "localhost").split(",")
-ALLOWED_HOSTS = ['localhost','127.0.0.1','myshop.com','www.myshop.com','web','madrs-web-commerce-backend.onrender.com']
+#ALLOWED_HOSTS = ['localhost','127.0.0.1','myshop.com','www.myshop.com','web','madrs-web-commerce-backend.onrender.com']
+ALLOWED_HOSTS = ['madrs-web-commerce-backend.onrender.com']
+
+
 
 DATABASES={
     'default': {
