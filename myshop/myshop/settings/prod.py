@@ -12,7 +12,7 @@ ADMINS=[
 
 #ALLOWED_HOSTS= os.getenv("ALLOWED_HOSTS", "localhost").split(",")
 #ALLOWED_HOSTS = ['localhost','127.0.0.1','myshop.com','www.myshop.com','web','madrs-web-commerce-backend.onrender.com']
-ALLOWED_HOSTS = ['madrs-web-commerce-backend.onrender.com','52.177.15.206']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -27,7 +27,7 @@ DATABASES={
     }
 }
 
-REDIS_HOST='redis'
-REDIS_PORT=6379
-REDIS_DB=1
+#REDIS_HOST='redis'
+#REDIS_PORT=6379
+#REDIS_DB=1
 #CACHES['default']['LOCATION']= REDIS_URL

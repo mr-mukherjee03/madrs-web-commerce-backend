@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-2+1aur&126g(xi=2l#!d%@!ber-wj)g6=d1c$^9773q$d+z-nf
 DEBUG = True
 
 #ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
-ALLOWED_HOSTS = ['madrs-web-commerce-backend.onrender.com']
+ALLOWED_HOSTS = ['madrs-web-commerce-backend.onrender.com','52.177.15.206']
 
 
 # Application definition
@@ -170,9 +170,9 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('GOOGLE_OAUTH2_SECRET')
 
 STATIC_ROOT=BASE_DIR/ 'static'
 
-REDIS_HOST='localhost'
-REDIS_PORT=6379
-REDIS_DB=1
+REDIS_HOST=config('REDIS_HOST')
+REDIS_PORT=config('REDIS_PORT')
+REDIS_DB=config('REDIS_DB')
 
 
 REST_FRAMEWORK={
