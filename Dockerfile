@@ -3,6 +3,8 @@ FROM python:3.12.8
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV DJANGO_SETTINGS_MODULE=myshop.settings.prod
+
 
 # Set working directory
 WORKDIR /code
@@ -17,7 +19,10 @@ RUN pip install -r requirements.txt
 # Copy project files
 COPY ./myshop/ .
 
-#RUN python ./myshop/manage.py collectstatic --noinput
+#RUN python manage.py migrate
+RUN python manage.py collectstatic --noinput
+
 
 # Start the app with gunicorn
-CMD ["gunicorn", "myshop.wsgi:application", "--bind", "0.0.0.0:8000"]
+#CMD ["gunicorn", "myshop.wsgi:application", "--bind", "0.0.0.0:80"]
+CMD ["sh", "-c", "python manage.py collectstatic --noinput && gunicorn myshop.wsgi:application --bind 0.0.0.0:80"]

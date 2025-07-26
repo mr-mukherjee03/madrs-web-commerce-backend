@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -155,7 +156,7 @@ MEDIA_URL='media/'
 MEDIA_ROOT=BASE_DIR/'media'
 CART_SESSION_ID='cart'
 
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
 
 STRIPE_PUBLISHABLE_KEY=config('STRIPE_PUBLISHABLE_KEY')
@@ -198,6 +199,6 @@ LOGIN_REDIRECT_URL='shop:product_list'
 LOGIN_URL='login'
 LOGOUT_URL='logout'
 
-INTERNAL_IPS=[
-    '127.0.0.1',
-]
+#INTERNAL_IPS=[
+#    '127.0.0.1',
+#]
