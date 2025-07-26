@@ -24,5 +24,5 @@ RUN python manage.py collectstatic --noinput
 
 
 # Start the app with gunicorn
-#CMD ["gunicorn", "myshop.wsgi:application", "--bind", "0.0.0.0:80"]
-CMD ["sh", "-c", "python manage.py collectstatic --noinput && gunicorn myshop.wsgi:application --bind 0.0.0.0:80"]
+CMD ["gunicorn", "myshop.wsgi:application", "--bind", "0.0.0.0:80"]
+#CMD ["sh", "-c", "python manage.py collectstatic --noinput && gunicorn myshop.wsgi:application --bind 0.0.0.0:80"]

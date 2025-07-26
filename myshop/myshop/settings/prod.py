@@ -65,5 +65,5 @@ DATABASES = {
 }
 
 
-CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "amqp://guest:guest@localhost:5672/")
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "amqp://guest:guest@74.225.171.66:5672/")
 

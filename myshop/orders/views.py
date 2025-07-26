@@ -13,7 +13,7 @@ from django.template.loader import render_to_string
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@login_required
+#@login_required
 def order_create(request):
     cart=Cart(request)
     if request.method=='POST':
