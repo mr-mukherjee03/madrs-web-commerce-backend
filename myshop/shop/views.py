@@ -4,11 +4,13 @@ from .forms import SearchForm
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 from .recommender import Recommender
+from django.contrib import messages
 
 
 # Create your views here.
 
 def product_list(request, category_slug=None):
+
     category=None
     categories=Category.objects.all()
     products=Product.objects.filter(available=True)
@@ -21,7 +23,7 @@ def product_list(request, category_slug=None):
     return render(
         request,
         'shop/product/list.html',
-        {
+        {  
             'category':category,
             'categories':categories,
             'products':products,

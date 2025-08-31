@@ -58,12 +58,9 @@ CACHES = {
 
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=None, #os.getenv("DATABASE_URL", "sqlite:///db.sqlite3"),
-        conn_max_age=600
-    )
+    'default': dj_database_url.config()
 }
 
 
-CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "amqp://guest:guest@74.225.171.66:5672/")
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "amqp://celery:celerypass@rabbitmq:5672//")
 

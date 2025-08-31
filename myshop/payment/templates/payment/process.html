@@ -39,6 +39,12 @@
         <input type="submit" value="Pay now">
         {% csrf_token %}
     </form>
+    <div style="padding: 15px; background-color: #e8f4fc; border: 1px solid #b6e0fe; border-left: 5px solid #007bff; border-radius: 4px; margin-bottom: 15px; float: right; width: 350px; font-size: 20px;">
+                <h4 style="margin-top: 0; color: #007bff;">Instructions</h4>
+                <p style="margin: 0;">
+                    <strong>Stripe Test Payment:</strong> Use card number <code>4242 4242 4242 4242</code>, any future expiry date, any CVC (e.g. <code>123</code>), and any ZIP.
+                </p>
+    </div>
 
 
 {% endblock content %}
