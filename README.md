@@ -64,8 +64,8 @@ The system is designed as a set of interacting services, containerized using Doc
 
 ### DevOps & Deployment
 -   **Containerization:** Docker, Docker Compose
--   **CI/CD:** GitHub Actions / Travis CI
---   **Hosting:** AWS, Google Cloud, Heroku, or any platform with Docker support.
+-   **CI/CD:** GitHub Actions
+--   **Hosting:** Microsoft Azure
 
 ### Others
 -   **Payments:** Stripe API
@@ -83,7 +83,7 @@ Follow these steps to get a local development environment up and running.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/madrs-web-commerce-backend.git](https://github.com/your-username/madrs-web-commerce-backend.git)
+    git clone [https://github.com/mr-mukherjee03/madrs-web-commerce-backend.git](https://github.com/mr-mukherjee03/madrs-web-commerce-backend.git)
     cd madrs-web-commerce-backend
     ```
 
