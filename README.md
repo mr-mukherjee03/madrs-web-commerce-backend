@@ -1,9 +1,8 @@
 # MADRS Web Commerce Backend
 
-[![Build Status](https://img.shields.io/travis/com/your-username/madrs-web-commerce-backend.svg?style=for-the-badge)](https://travis-ci.com/your-username/madrs-web-commerce-backend)
-[![Coverage Status](https://img.shields.io/coveralls/github/your-username/madrs-web-commerce-backend.svg?style=for-the-badge)](https://coveralls.io/github/your-username/madrs-web-commerce-backend?branch=main)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Docker Pulls](https://img.shields.io/docker/pulls/your-dockerhub-username/madrs-web-commerce-backend.svg?style=for-the-badge)](https://hub.docker.com/r/your-dockerhub-username/madrs-web-commerce-backend)
+[![Docker Pulls](https://hub.docker.com/repository/docker/smukh03/madrs/general)]
 
 A production-ready, modular web retail system built with Django, Docker, Celery, and Stripe. This project is designed with a distributed architecture, leveraging asynchronous task processing and containerized deployment for scalability and maintainability.
 
@@ -133,3 +132,8 @@ All configuration is managed through environment variables in the `.env` file. K
 To run the test suite, execute the following command:
 ```bash
 docker-compose exec web python manage.py test
+
+
+## Contact
+
+mukherjee.inbox@gmail.com
