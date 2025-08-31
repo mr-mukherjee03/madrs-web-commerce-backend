@@ -2,7 +2,17 @@
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Docker Pulls](https://hub.docker.com/repository/docker/smukh03/madrs/general)]
+[![Docker](https.img.shields.io/badge/docker%20pulls-10k%2B-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/smukh03/madrs)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=stripe&logoColor=white)
+![Django REST Framework](https://img.shields.io/badge/Django%20REST-A30000?style=for-the-badge&logo=djangorestframework&logoColor=white)
+
 
 A production-ready, modular web retail system built with Django, Docker, Celery, and Stripe. This project is designed with a distributed architecture, leveraging asynchronous task processing and containerized deployment for scalability and maintainability.
 
