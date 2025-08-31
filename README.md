@@ -133,7 +133,7 @@ To run the test suite, execute the following command:
 ```bash
 docker-compose exec web python manage.py test
 
+```
 
 ## Contact
-
 mukherjee.inbox@gmail.com
